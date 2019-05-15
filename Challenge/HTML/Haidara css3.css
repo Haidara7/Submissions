@@ -1,0 +1,76 @@
+
+.cl1{
+    background-color:brown;
+    width: 80%;
+    height:500px;
+    margin: auto;
+}
+.img{
+    background-image: url("https://scontent.fbey18-1.fna.fbcdn.net/v/t1.0-9/30707709_382047058938071_8116556941277415875_n.png?_nc_cat=107&_nc_ht=scontent.fbey18-1.fna&oh=7ad959765726ab4ed0b8879ef59f4edc&oe=5D2AA430");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 130px;
+    width: 50%;
+    margin: auto;
+}
+.img h4{
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 15px;
+}
+.img h5{
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+.nav{
+    background-color: #876649;
+    overflow: hidden;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+}
+.nav a{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+.nav a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.menu{
+    float: left;
+    width: 30%
+}
+.art{
+    float: right;
+    width: 70%;
+}
+.art12{
+    float: left;
+    width: 48%
+}
+.art22{
+    border-left: 2px solid gray;
+    height: 100%;
+    float: right;
+    width: 49%;
+}
+.art22 p{
+    padding-left: 9px;
+}
+.art22 h4{
+    padding-left: 9px;
+}
+.art22 button{
+    margin-left: 9px;
+}
+
+.cr{
+    text-align: center;
+}
