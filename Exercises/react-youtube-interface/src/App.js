@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 
 import './App.css';
-import Test from './Component/Test';
+import Img from './Component/logo';
+
 
 class App extends Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Test/>
+                <Img/>
             </div>
         );
     }
