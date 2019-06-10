@@ -55,7 +55,15 @@ function onDataReceived(text) {
   else if (arg1[0] === 'add' ||text === 'add\n'){
     add(arg1,arr);
   }
-  
+  else if (text === 'remove\n'){
+    remove();
+  }
+  else if(text === 'remove 1\n'){
+    removeFirst();
+  }
+  else if (text === 'remove 2\n'){
+    removeSecond();
+  }
   else{
     unknownCommand(text);
   }
@@ -101,6 +109,18 @@ function add(haidaraArr,arr){
   console.log("error")
   }
 }
+function remove(){
+  
+arr.pop();
+
+}
+function removeFirst(){
+arr.shift();
+}
+function removeSecond (){
+arr.splice(1,1);
+}
+
 
 /**
  * Exits the application
