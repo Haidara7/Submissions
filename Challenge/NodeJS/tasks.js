@@ -52,6 +52,9 @@ function onDataReceived(text) {
   else if (text === 'list\n'){
     list(arr);
   }
+  else if (arg1[0] === 'add' ||text === 'add\n'){
+    add(arg1,arr);
+  }
   
   else{
     unknownCommand(text);
@@ -86,6 +89,16 @@ function help(){
 function list(haidara){
   for(var i =0; i<haidara.length; i++){
   console.log([i+1] +")"+ haidara[i])
+  }
+}
+function add(haidaraArr,arr){
+  if(haidaraArr[1]){
+    haidaraArr.shift()
+    arr.push(haidaraArr.join(" "))
+  }
+  else{
+  
+  console.log("error")
   }
 }
 
