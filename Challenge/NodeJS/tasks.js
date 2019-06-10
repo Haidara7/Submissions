@@ -75,7 +75,7 @@ function hello(pr){
 }
 // help  that lists all the possible commands , if the user wants to know the commands in our code.
 function help(){
-  console.log('hello\nquit\nexit\nunknown command\n')
+  console.log('if you write "hello" + text you wil get "hello + your text + !\nquit\nexit\nunknown command\n')
 }
 
 
