@@ -34,12 +34,14 @@ function startApp(name){
  * @returns {void}
  */
 function onDataReceived(text) {
-  if (text === 'quit\n' || text === 'exit') {
+  var arg = text.split(" ");
+  if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if(arg[0] === 'hello' || text === 'hello\n'){
+    hello(arg);
   }
+  
   else if (text === 'help\n'){
     help();
 
@@ -68,8 +70,8 @@ function unknownCommand(c){
  *
  * @returns {void}
  */
-function hello(){
-  console.log('hello!')
+function hello(pr){
+  console.log(pr.join(" "))
 }
 // help  that lists all the possible commands , if the user wants to know the commands in our code.
 function help(){
