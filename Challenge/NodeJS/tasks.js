@@ -1,4 +1,7 @@
 
+
+var tasks=["task1","tasks2", "tasks3"]
+
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -47,6 +50,10 @@ function onDataReceived(text) {
 
 
   }
+  else if (text === "list\n"){
+ list();
+  
+}
   else{
     unknownCommand(text);
   }
@@ -76,6 +83,11 @@ function hello(pr){
 // help  that lists all the possible commands , if the user wants to know the commands in our code.
 function help(){
   console.log('if you write "hello" + text you wil get "hello + your text + !"\nquit\nexit\nunknown command\n')
+}
+function list(){
+for (var i =0; i<tasks.length; i++){
+  console.log(i+1 +" "+tasks[i])
+}
 }
 
 
