@@ -71,7 +71,7 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(pr){
-  console.log(pr.join(" "))
+  console.log(pr.join(" ").replace("\n","!"))
 }
 // help  that lists all the possible commands , if the user wants to know the commands in our code.
 function help(){
