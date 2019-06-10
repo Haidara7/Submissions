@@ -1,7 +1,4 @@
 
-
-var tasks=["task1","tasks2", "tasks3"]
-
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -36,8 +33,11 @@ function startApp(name){
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+var arr = ['task1','task2','task3','task4'];
 function onDataReceived(text) {
-  var arg = text.split(" ");
+  var arg = text.trim('').split(" ")
+  var arg1= text.trim('').split(" ")
+
   if (text === 'quit\n' || text === 'exit\n') {
     quit();
   }
@@ -48,12 +48,11 @@ function onDataReceived(text) {
   else if (text === 'help\n'){
     help();
 
-
   }
-  else if (text === "list\n"){
- list();
+  else if (text === 'list\n'){
+    list(arr);
+  }
   
-}
   else{
     unknownCommand(text);
   }
@@ -78,18 +77,17 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(pr){
-  console.log(pr.join(" ").replace("\n","!"))
+  console.log(pr.join(" ") + "!")
 }
 // help  that lists all the possible commands , if the user wants to know the commands in our code.
 function help(){
-  console.log('if you write "hello" + text you wil get "hello + your text + !"\nquit\nexit\nunknown command\n')
+  console.log('if you write "hello" + text you will get "hello + your text + !"\nquit\nexit\nunknown command\n')
 }
-function list(){
-for (var i =0; i<tasks.length; i++){
-  console.log(i+1 +" "+tasks[i])
+function list(haidara){
+  for(var i =0; i<haidara.length; i++){
+  console.log([i+1] +")"+ haidara[i])
+  }
 }
-}
-
 
 /**
  * Exits the application
