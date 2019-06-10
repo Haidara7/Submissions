@@ -71,6 +71,7 @@ function unknownCommand(c){
 function hello(){
   console.log('hello!')
 }
+// help  that lists all the possible commands , if the user wants to know the commands in our code.
 function help(){
   console.log('hello\nquit\nexit\nunknown command\n')
 }
