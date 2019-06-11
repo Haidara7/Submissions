@@ -58,12 +58,12 @@ function onDataReceived(text) {
   else if (text === 'remove\n'){
     remove();
   }
-  else if(text === 'remove 1\n'){
-    removeFirst();
-  }
-  else if (text === 'remove 2\n'){
-    removeSecond();
-  }
+  // else if(text === 'remove 1\n'){
+  //   removeFirst();
+  // }
+  // else if (text === 'remove 2\n'){
+  //   removeSecond();
+  // }
   else{
     unknownCommand(text);
   }
