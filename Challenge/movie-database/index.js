@@ -56,6 +56,38 @@ app.get('/movies/delete',(req, res) => {
 
 })
 
+app.get('/movies/read/by-date',(req, res) => {
+
+    res.send({status:200, data:
+        movies.sort(function(a,b) {
+            return a.year - b.year;
+    })
+    })
+
+})
+app.get('/movies/read/by-rating',(req, res) => {
+
+    res.send({status:200, data:
+        movies.sort(function(a,b) {
+            return a.rating - b.rating;
+        })
+    })
+
+})
+
+app.get('/movies/read/by-title',(req, res) => {
+
+    res.send({status:200, data:
+        movies.sort(function(a,b) {
+            var x = a.title.toLowerCase();
+            var y = b.title.toLowerCase();
+            return x < y ? -1 : x > y ? 1 : 0;
+        
+        })
+    })
+
+})
+
+
 
 app.listen(3000 ,() => console.log('listening on port 3000....'));
-
