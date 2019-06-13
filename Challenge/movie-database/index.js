@@ -123,6 +123,24 @@ app.get('/movies/delete/:id?',(req, res)=>{
     }
 })
 
+app.get('/movies/update/:id',(req,res)=>{
+    if(req.params.id >=0 && req.params.id < movies.length){
+        if(req.query.title!== movies[req.params.id].title){
+        movies[req.params.id ].title=req.query.title}
+        else if(req.query.rating !== movies[req.params.id].rating){
+         movies[req.params.id].rating = parseInt(req.query.rating);
+    }
+    else if(req.query.year !== movies[req.params.id].year){
+         movies[req.params.id].year = parseInt(req.query.year);
+    
+    }
+    
+     res.send({status:200, data : movies})
+    }
+     else{
+         res.send({status:403, error:true, message:'you cannot create a movie without providing a title and a year'})
+     }
+    })
 
 
 app.listen(3000 ,() => console.log('listening on port 3000....'));
