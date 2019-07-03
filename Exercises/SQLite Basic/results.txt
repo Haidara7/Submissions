@@ -1,0 +1,52 @@
+select * from students;
+
+
+"1"	"Alex"	"21"	"M"	"200"
+"2"	"Basma"	"25"	"F"	"300"
+"3"	"Hasan"	"30"	"M"	"150"
+"4"	"Layal"	"18"	"F"	"350"
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+
+
+
+2 select * from students where age >30
+
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+
+ 
+3 select name from students where age = 30 and Gender = 'F' ;
+
+0 rows returned in 1ms from: select name from students where age = 30 and Gender = 'F' ;
+
+4 select points from students where name = 'Alex' ;
+
+200
+
+5 
+INSERT INTO students( ID , Name , Age ,Gender , Points )
+values (7 , 'Haidara' , 28 , 'M' , 6746) ;
+
+
+Query executed successfully: INSERT INTO students( ID , Name , Age ,Gender , Points )
+values (7 , 'Haidara' , 28 , 'M' , 6746) ; (took 19ms, 1 rows affected)
+
+
+6 UPDATE students
+SET Points = 500
+where ID =2 ;
+
+Query executed successfully: UPDATE students
+SET Points = 500
+where ID =2 ; (took 0ms, 1 rows affected)
+
+7
+UPDATE students
+SET Points = 180
+where ID =1 ;
+
+Query executed successfully: UPDATE students
+SET Points = 180
+where ID =1 ; (took 0ms, 1 rows affected)
+
