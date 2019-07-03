@@ -1,4 +1,4 @@
-select * from students;
+﻿select * from students;
 
 
 "1"	"Alex"	"21"	"M"	"200"
@@ -49,4 +49,50 @@ where ID =1 ;
 Query executed successfully: UPDATE students
 SET Points = 180
 where ID =1 ; (took 0ms, 1 rows affected)
+
+
+CREATE TABLE
+create TABLE graduates (
+ID integer,notnull,primaryKEY, autoincrement
+Name, Text, Not Null, Unique
+Age, Integer
+Gender, Text
+Points, Integer
+Graduation, Text );
+
+table graduates already exists: create TABLE graduates (
+
+Execute SQL tab, do the following:
+
+1 Copy Layal's data from students to graduates
+INSERT INTO graduates (ID ,Name ,Age ,Gender ,Points )
+SELECT Id,name,Age,Gender,Points FROM students
+WHERE Id = 4;
+
+
+Query executed successfully: INSERT INTO graduates (ID ,Name ,Age ,Gender ,Points )
+SELECT Id,name,Age,Gender,Points FROM students
+WHERE Id = 4; (took 30ms, 1 rows affected)
+
+
+
+
+2 Add the graduation date previously mentioned to Layal's record in graduates
+UPDATE graduates
+SET Graduation = '08/09/2018'
+where ID =4 ;
+
+Query executed successfully: UPDATE graduates
+SET Graduation = '08/09/2018'
+where ID =4 ; (took 0ms, 1 rows affected)
+
+
+3 Remove Layal's record from students
+delete FROM students WHERE NAME = 'Layal';
+
+Query executed successfully: delete FROM students WHERE NAME = 'Layal'; (took 0ms, 0 rows affected)
+
+
+
+
 
