@@ -93,6 +93,38 @@ delete FROM students WHERE NAME = 'Layal';
 Query executed successfully: delete FROM students WHERE NAME = 'Layal'; (took 0ms, 0 rows affected)
 
 
+JOINS
+11
+SELECT  employees.Name ,companies.Name , companies.Date
+FROM companies 
+INNER JOIN employees ON companies.Id = employees.Id;
+
+"Alaa"	"Instagram"	"2010"
+"Hala"	"Snapchat"	"2011"
+"Marc"	"Google"	"1998"
+"Maria"	"Facebook"	"2004"
+
+
+12
+SELECT employees.Name , companies.Date
+FROM companies
+INNER JOIN employees ON companies.ID = employees.ID 
+WHERE companies.Date<2000;
+
+"Marc"	"1998"
+
+13
+SELECT companies.Name , employees.Role
+FROM companies
+INNER JOIN employees ON companies.ID = employees.ID 
+WHERE employees.Role = "Graphic Designer";
+
+"Snapchat"	"Graphic Designer"
+
+
+
+
+
 
 
 
